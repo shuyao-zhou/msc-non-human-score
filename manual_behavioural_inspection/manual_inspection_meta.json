@@ -1,0 +1,19 @@
+{
+  "pipeline_stage": "03b_manual_behavioural_inspection",
+  "partition": "test",
+  "window": 0,
+  "selection": "10 highest frozen K-means scores among U-named accounts",
+  "models_refitted": false,
+  "manual_review_role": "descriptive raw-event inspection, not ground truth",
+  "representative_cases": [
+    "M03",
+    "M04",
+    "M05"
+  ],
+  "outputs": {
+    "case_key": "manual_behavioural_inspection/manual_top10_case_key.csv",
+    "casebook": "manual_behavioural_inspection/manual_top10_casebook.pdf",
+    "table_13": "manual_behavioural_inspection/Table_13_manual_behavioural_summary.csv",
+    "figure_4": "manual_behavioural_inspection/Figure_04_manual_behavioural_inspection.png"
+  }
+}

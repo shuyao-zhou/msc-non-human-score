@@ -1,0 +1,25 @@
+{
+  "pipeline_stage": "03_model_disagreement",
+  "upstream_model_stage": "02b_core5_model_comparison",
+  "core5": [
+    "period_strength",
+    "iat_cv",
+    "log_volume",
+    "log_fanout",
+    "quiet_frac"
+  ],
+  "primary_window": 0,
+  "top_k": 100,
+  "mixture_disagreement_score": "log_likelihood_ratio",
+  "models_refitted": false,
+  "test_evaluated": false,
+  "outputs": {
+    "table_3": "model_disagreement/Table_03_model_rank_agreement.csv",
+    "figure_3": "model_disagreement/Figure_03_disagreement_case_profiles.png",
+    "cases": "model_disagreement/disagreement_cases.csv",
+    "table_10": "model_disagreement/Table_10_disagreement_persistence.csv",
+    "figure_10": "model_disagreement/Figure_10_disagreement_raw_activity.png",
+    "table_11": "model_disagreement/Table_11_kmeans_case_decomposition.csv",
+    "score_resolution": "model_disagreement/mixture_score_resolution.csv"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "pipeline_stage": "01_build_static_features",
+  "window_days": 14,
+  "min_agg": 20,
+  "min_period": 50,
+  "periodicity": {
+    "bin_seconds": 10,
+    "max_period_seconds": 21600,
+    "score_range": [
+      0.0,
+      300.0
+    ]
+  },
+  "quiet_hours": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    20,
+    21,
+    23
+  ],
+  "n_complete_windows": 4,
+  "n_final_rows": 104147,
+  "n_final_accounts": 29558,
+  "eligible_account_sha256": "dcbd9b40cf658822379068ee8ae5f52da7b81b66d936131236c3648a9107bb5b",
+  "feature_helper_sha256": "4259dce691607386d3f09f8a1754a5e6dc888a815c6b830e592f6376e021cff5",
+  "input_hashes": {
+    "auth_main_parquet": "aead1ac644e09a604cb63f217986817aa41721790d6509237fcd4e98028fe081",
+    "account_split_static_json": "4b17d543a0eb53747e2c51cbc99cbe3d5ea18406a978c3e638f355ea6ae44423",
+    "quiet_hours_json": "433ac44dd46373762b26ac5b7262d887b4d218b4a25a04cf8dcb626f8f71f9e2"
+  },
+  "output_hashes": {
+    "feat_base": "3bdba2d78c2369b3230bb16265cf7a39fd9248081fef6042b93bebc5299ddc3d",
+    "feat_periodicity": "7c65c629a3aeffb3f158cd2e96b368caea11b9a2231b49ae7ca378ec418365b8",
+    "feat_final": "73376fd6abc9cea9a01faf6434e22417493acd150d5ef7561e32974f2b273487"
+  }
+}

@@ -1,0 +1,4 @@
+Scorer pair,Spearman rho,Top-100 overlap
+Empirical rank–K-means,0.9506338597925392,0.29
+Empirical rank–Custom mixture,0.9039610291139221,0.39
+K-means–Custom mixture,0.9315529206082964,0.27

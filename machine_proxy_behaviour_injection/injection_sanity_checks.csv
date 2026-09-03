@@ -1,0 +1,7 @@
+check,n_failures
+original_raw_count_matches_canonical,0
+injected_count_matches_alpha_definition,0
+recorded_total_matches_original_plus_injected,0
+recomputed_volume_matches_expected_total,0
+fanout_never_decreases,0
+injected_times_within_window0,0

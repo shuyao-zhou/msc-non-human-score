@@ -1,0 +1,24 @@
+{
+  "pipeline_stage": "02c_final_static_test_evaluation",
+  "primary_method": "kmeans_core5",
+  "core5": [
+    "period_strength",
+    "iat_cv",
+    "log_volume",
+    "log_fanout",
+    "quiet_frac"
+  ],
+  "models_refitted": false,
+  "feature_selection_reopened": false,
+  "model_selection_reopened": false,
+  "test_used_for_tuning_in_clean_pipeline": false,
+  "test_history_note": "The clean pipeline did not use the test partition for model development, but the same split had been inspected during earlier exploratory work.",
+  "feature_sha256": "73376fd6abc9cea9a01faf6434e22417493acd150d5ef7561e32974f2b273487",
+  "account_split_sha256": "4b17d543a0eb53747e2c51cbc99cbe3d5ea18406a978c3e638f355ea6ae44423",
+  "model_comparison_meta_sha256": "75d24b900c1c17683ecac4c09a7bec1ee844b4015d7d7cf336ee94582b2341b3",
+  "outputs": {
+    "test_metrics": "static_test_evaluation/test_kmeans_metrics.csv",
+    "table_4": "static_test_evaluation/Table_04_calibration_vs_test_kmeans.csv",
+    "test_stability": "static_test_evaluation/test_kmeans_stability.csv"
+  }
+}

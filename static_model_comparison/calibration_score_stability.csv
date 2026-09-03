@@ -1,0 +1,16 @@
+method,comparison,n_accounts,spearman
+periodicity_reference,w0_vs_w1,3678,0.8252204682702642
+periodicity_reference,w0_vs_w2,3634,0.5069582186218761
+periodicity_reference,w0_vs_w3,3583,0.4843917474045588
+empirical_rank,w0_vs_w1,3678,0.8524500186211262
+empirical_rank,w0_vs_w2,3634,0.735642785127113
+empirical_rank,w0_vs_w3,3583,0.6798220374497469
+kmeans_core5,w0_vs_w1,3678,0.8516937762082589
+kmeans_core5,w0_vs_w2,3634,0.7645559812049795
+kmeans_core5,w0_vs_w3,3583,0.7338617652152921
+gmm_core5,w0_vs_w1,3678,0.8649439181145058
+gmm_core5,w0_vs_w2,3634,0.5641480493375435
+gmm_core5,w0_vs_w3,3583,0.5310859607167584
+custom_mixture,w0_vs_w1,3678,0.8455185729150325
+custom_mixture,w0_vs_w2,3634,0.7344425672107208
+custom_mixture,w0_vs_w3,3583,0.709394075468526

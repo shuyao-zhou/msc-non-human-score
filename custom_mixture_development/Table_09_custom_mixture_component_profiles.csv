@@ -1,0 +1,7 @@
+comp,pi,pct_capped,volume_mean,fanout_mean,cv_mean,quiet_mu,assignment,behavioural_pattern
+0,0.1033,0.87,20790.0,0.5,6.36,0.318,Automation-oriented,"Very high-volume, strongly periodic activity with narrow destination fanout."
+1,0.1994,0.458,4835.0,12.4,1.37,0.318,Automation-oriented,"High-volume, periodic activity with broader destination fanout and relatively regular spacing."
+2,0.3096,0.038,2937.0,12.9,7.95,0.271,Automation-oriented,"High-activity, broad-destination behaviour with more irregular spacing and weaker periodicity."
+3,0.2017,0.006,1347.0,12.9,13.35,0.07,Other,"Broad-destination, highly irregular activity with little quiet-hour concentration."
+4,0.0509,0.0,350.0,0.5,0.72,0.285,Automation-oriented,"Lower-volume, narrow-destination activity with very regular spacing and elevated quiet-hour activity despite weak periodicity."
+5,0.135,0.0,4.0,0.5,3.95,0.102,Other,"Very sparse, low-volume, narrow-destination activity."

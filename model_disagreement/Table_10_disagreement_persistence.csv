@@ -1,0 +1,13 @@
+Case,Direction,Account,Windows,Consistency
+1,Empirical rank > K-means,U5247@DOM1,4,1.0
+2,Empirical rank > K-means,U5846@DOM1,4,1.0
+3,Empirical rank > K-means,U7086@DOM1,4,1.0
+4,K-means > Empirical rank,ANONYMOUS LOGON@C13508,1,
+5,K-means > Empirical rank,ANONYMOUS LOGON@C16073,1,
+6,K-means > Empirical rank,ANONYMOUS LOGON@C5902,1,
+7,Custom mixture > K-means,C13356$@DOM1,4,1.0
+8,Custom mixture > K-means,C2070$@DOM1,4,1.0
+9,Custom mixture > K-means,C2175$@DOM1,4,1.0
+10,K-means > Custom mixture,ANONYMOUS LOGON@C16073,1,
+11,K-means > Custom mixture,U7573@DOM1,4,0.75
+12,K-means > Custom mixture,U8218@DOM1,4,1.0

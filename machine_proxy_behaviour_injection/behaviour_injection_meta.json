@@ -1,0 +1,50 @@
+{
+  "pipeline_stage": "04_machine_proxy_behaviour_injection",
+  "target_partition": "calibration",
+  "target_window": 0,
+  "target_proxy": "U-named user proxy",
+  "donor_partition": "fit",
+  "donor_proxy": "$ machine proxy",
+  "alphas": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "n_replicates": 5,
+  "donor_neighbours": 50,
+  "n_bootstrap": 2000,
+  "core5": [
+    "period_strength",
+    "iat_cv",
+    "log_volume",
+    "log_fanout",
+    "quiet_frac"
+  ],
+  "primary_scorer": "kmeans_core5",
+  "models_refitted": false,
+  "test_evaluated": false,
+  "n_targets": 1291,
+  "outputs": {
+    "machine_proxy_behaviour_injection/target_feasibility_window0.csv": "64b89b804779af84e16d0a48a42e71ff918516b464ee15736477967c0a80458d",
+    "machine_proxy_behaviour_injection/machine_donor_assignments.csv": "2f886a900504c3639ff4dbd30fc418f53bac0932a00c7aa16c246c88eb627d64",
+    "machine_proxy_behaviour_injection/injection_manifest.csv": "0b2f43edee52b1b8a4033cf73b4f5a2826e462069b99dc4eb1839081175d90e0",
+    "machine_proxy_behaviour_injection/target_original_core5_and_scores.csv": "ef16cd1305fd3a3ddc56835ad61057506435b78f4346451bdb8211ff51a1964c",
+    "machine_proxy_behaviour_injection/simulated_additive_core5_and_scores.csv": "0572ab3ed607effab8aa5dc281d18d6430d91bc439133010903214ccf06bd3fa",
+    "machine_proxy_behaviour_injection/simulated_additive_core5_and_scores.parquet": "cb8b8eaa51713cad4d6425eec176d7fd88d5d74bf22793d177a39ed15f1bad0a",
+    "machine_proxy_behaviour_injection/account_level_responsiveness.csv": "5d0777b0cd4a2504e360383fae637fe990feddd90ac4628191b9953947c9d6e5",
+    "machine_proxy_behaviour_injection/primary_responsiveness_summary.csv": "4c0b12efbac7241aa9dba76ab5473eab6eefde8a7a274e849846c4e2909efa3a",
+    "machine_proxy_behaviour_injection/kmeans_one_feature_reversion_rows.csv": "afd1b087fd6b2b4e6bdbc422dd4106986ec1924a67ea658999f09bff02618e8e",
+    "machine_proxy_behaviour_injection/kmeans_one_feature_reversion_account_level.csv": "d813701e377f4472100336d400e368aaac2a2e76da286d53e13472ef4e864996",
+    "machine_proxy_behaviour_injection/kmeans_one_feature_reversion_summary.csv": "855ee5c4d0531df1584a35dee1ba975ccc06609d99577e2e1c68db9d84f7f155",
+    "machine_proxy_behaviour_injection/model_responsiveness_account_level.csv": "1e098b70ee7782053b5759eeb34deec867d73c9db533e1710b34aee9efc97c61",
+    "machine_proxy_behaviour_injection/model_responsiveness_summary.csv": "6b1e7ecd290358b76a370abd2dfdb42a4eb548b5efce67e906832832b74615c1",
+    "machine_proxy_behaviour_injection/model_responsiveness_dose_response.csv": "33d309c0c530afc7eb050a20f4310de7af61960d6bda47f25b64c9cc08e0de45",
+    "machine_proxy_behaviour_injection/Table_14_kmeans_responsiveness.csv": "440a5b5edeff71c1322bdeb88065636fe00cbff2d34ff2616579d2fe15553527",
+    "machine_proxy_behaviour_injection/Table_15_kmeans_feature_reversion.csv": "66b1203e9962306a861cd1cc78f7375faae786fa54fd16e678dcd6032a7582a6",
+    "machine_proxy_behaviour_injection/Table_05_frozen_model_responsiveness.csv": "22257fd3b208c69e48c6bb5c90645b9965e6cc4826a51cc4a98a136f61fb5602",
+    "machine_proxy_behaviour_injection/Figure_05_kmeans_injection_response.png": "d4b88623c95697f4cb0bf06f055ca8fd604d5ada786a6db6f20a4062582fd330",
+    "machine_proxy_behaviour_injection/Figure_05_kmeans_injection_response.pdf": "ffe5973ae56a32f3426e25c981f268c1ea50df8472295a5d60104c89b1cb602b",
+    "machine_proxy_behaviour_injection/Figure_06_kmeans_feature_reversion.png": "8ae819d5893972f9ae273299e2ee24289da2f36521e7ac511c019e1a4fdbc796",
+    "machine_proxy_behaviour_injection/Figure_06_kmeans_feature_reversion.pdf": "635e2f4479bafa2ef14f8814aa98c58200ba178b401bf7421d0c929842d92f76"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "pipeline_stage": "02b_core5_model_comparison",
+  "primary_method": "kmeans_core5",
+  "candidate_methods": [
+    "periodicity_reference",
+    "empirical_rank",
+    "kmeans_core5",
+    "gmm_core5",
+    "custom_mixture"
+  ],
+  "core5": [
+    "period_strength",
+    "iat_cv",
+    "log_volume",
+    "log_fanout",
+    "quiet_frac"
+  ],
+  "feature_sha256": "73376fd6abc9cea9a01faf6434e22417493acd150d5ef7561e32974f2b273487",
+  "account_split_sha256": "4b17d543a0eb53747e2c51cbc99cbe3d5ea18406a978c3e638f355ea6ae44423",
+  "representation_meta_sha256": "b8a75494a599e7567ce2a3b1794ec78b1aa42be39dc9a2639863d9b3934717a9",
+  "mixture_state_sha256": "a61aa23698667fdb5d21bbd2f027aa484550d906f1af04c6dc898e444ccb2585",
+  "evaluation_positive_reference": "dollar_suffix_plus_SYSTEM_LOCAL_SERVICE_NETWORK_SERVICE",
+  "evaluation_negative_reference": "U_named_user_proxy",
+  "anonymous_logon_in_positive_reference": false,
+  "test_evaluated": false,
+  "outputs": {
+    "calibration_metrics": "static_model_comparison/calibration_model_metrics.csv",
+    "calibration_stability": "static_model_comparison/calibration_score_stability.csv",
+    "frozen_scorers": "static_model_comparison/frozen_generic_scorers.pkl",
+    "table_2": "static_model_comparison/Table_02_calibration_model_comparison.csv",
+    "figure_2": "static_model_comparison/Figure_02_precision_at_k.png",
+    "table_8": "static_model_comparison/Table_08_calibration_topk.csv"
+  }
+}

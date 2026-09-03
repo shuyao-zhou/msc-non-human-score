@@ -1,0 +1,11 @@
+Case,NHS rank,Observed raw behaviour
+M01,1,Persistent high activity with repeated inter-arrival modes and recurring use of multiple destinations.
+M02,2,"High activity early in the window followed by a sharp decline, with repeated timing and one dominant destination."
+M03,3,"Episodic activity with a late surge, a strong repeated interval and highly concentrated destination use."
+M04,4,"Clear changes between low- and high-activity regimes, with one dominant repeated interval and one main destination."
+M05,5,"Mostly sustained activity with a short low-activity period, repeated timing and recurring use of two main destinations."
+M06,6,"Early high activity followed by lower activity, with a strong repeated interval and one dominant destination."
+M07,7,A short high-volume period with repeated timing and concentrated destination use.
+M08,8,"Persistent activity across the window, repeated timing and a broader set of recurring destinations."
+M09,9,Persistent activity with repeated timing but relatively diverse destination use.
+M10,10,"A shift into sustained higher activity, with a strong repeated interval and one dominant destination."

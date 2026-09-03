@@ -1,0 +1,25 @@
+{
+  "pipeline_stage": "02a_custom_mixture_development",
+  "selected_K": 6,
+  "K_selection_rule": "first K+1 with dBIC below one third of the largest previous improvement",
+  "machine_components": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "component_assignment": "fitting_set_behavioural_profile_interpretation",
+  "recompute_bic_scan": false,
+  "refit_final_mixture": false,
+  "bic_source": "loaded from custom_mixture_development/custom_mixture_bic_scan.csv",
+  "mixture_state_source": "loaded from custom_mixture_development/custom_mixture_K6_state.json",
+  "feature_sha256": "73376fd6abc9cea9a01faf6434e22417493acd150d5ef7561e32974f2b273487",
+  "account_split_sha256": "4b17d543a0eb53747e2c51cbc99cbe3d5ea18406a978c3e638f355ea6ae44423",
+  "mixture_model_version": "custom_mixture_k_v1",
+  "outputs": {
+    "bic_scan": "custom_mixture_development/custom_mixture_bic_scan.csv",
+    "mixture_state": "custom_mixture_development/custom_mixture_K6_state.json",
+    "figure_9": "custom_mixture_development/Figure_09_mixture_bic_selection.png",
+    "table_9": "custom_mixture_development/Table_09_custom_mixture_component_profiles.csv"
+  }
+}

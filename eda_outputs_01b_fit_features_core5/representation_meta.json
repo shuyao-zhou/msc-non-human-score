@@ -1,0 +1,30 @@
+{
+  "pipeline_stage": "01b_fit_only_feature_assessment_core5_freeze",
+  "representation_name": "CORE5",
+  "core5_generic": [
+    "period_strength",
+    "iat_cv",
+    "log_volume",
+    "log_fanout",
+    "quiet_frac"
+  ],
+  "diagnostic_features": [
+    "active_days",
+    "ticket_frac",
+    "logon_miss_frac"
+  ],
+  "feature_sha256": "73376fd6abc9cea9a01faf6434e22417493acd150d5ef7561e32974f2b273487",
+  "account_split_sha256": "4b17d543a0eb53747e2c51cbc99cbe3d5ea18406a978c3e638f355ea6ae44423",
+  "selection_principle": "parsimonious coverage of complementary behavioural constructs; not exhaustive subset search and not maximisation of weak-proxy AUPRC",
+  "quiet_frac_role": "enterprise-adaptive temporal context",
+  "calibration_evaluated": false,
+  "test_evaluated": false,
+  "outputs": {
+    "selection_evidence": "eda_outputs_01b_fit_features_core5/08_core5_representation_evidence.csv",
+    "candidate_boxplots": "eda_outputs_01b_fit_features_core5/02_candidate_feature_boxplots_strict_proxy.png",
+    "candidate_correlation": "eda_outputs_01b_fit_features_core5/manuscript_ready/Figure_08_candidate_feature_correlation.csv",
+    "core5_ecdf": "eda_outputs_01b_fit_features_core5/manuscript_ready/Figure_07_core5_strict_proxy_ecdf.png",
+    "candidate_diagnostics_table": "eda_outputs_01b_fit_features_core5/manuscript_ready/Table_06_candidate_feature_diagnostics.csv",
+    "fixed_orientation_table": "eda_outputs_01b_fit_features_core5/manuscript_ready/Table_07_fixed_feature_orientation.csv"
+  }
+}
