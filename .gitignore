@@ -1,0 +1,25 @@
+# Raw LANL data
+auth.txt.gz
+auth_main.parquet
+
+# Large generated data
+*.parquet
+periodicity_parts/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor / operating-system files
+.vscode/
+.DS_Store
+
+# Temporary development copies
+*_old*
+*_backup*
+*(1)*
+*(2)*
