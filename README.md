@@ -3,9 +3,14 @@
 Code accompanying the MSc dissertation on an unsupervised continuous
 Non-Human Score (NHS) for enterprise authentication activity.
 
-## Notebook order
+The analysis uses enterprise authentication logs to construct interpretable
+account-window behavioural features, compare several unsupervised scoring
+methods, select a primary NHS, and evaluate its behaviour on held-out and
+semi-synthetic analyses.
 
-Run the analysis in the following order:
+## Repository structure
+
+The notebooks should be run in the following order:
 
 1. `00_raw_behaviour_eda.ipynb`
 2. `01_build_static_features.ipynb`
@@ -17,56 +22,95 @@ Run the analysis in the following order:
 8. `03b_manual_behavioural_inspection.ipynb`
 9. `04_machine_proxy_behaviour_injection.ipynb`
 
-The supporting modules are:
+Supporting modules:
 
-- `nhs_feature_utils.py`
-- `nhs_split_eval.py`
-- `nhs_mixture.py`
+- `nhs_feature_utils.py` — feature construction and raw-event utilities
+- `nhs_split_eval.py` — account splitting and frozen generic scorers
+- `nhs_mixture.py` — custom probabilistic mixture implementation
+
+Small reproducibility artefacts and final analysis outputs are also included,
+such as frozen model states, metadata, summary tables and dissertation figures.
 
 ## Data
 
 The Los Alamos National Laboratory authentication data are not redistributed
 in this repository.
 
-The notebooks currently use the authentication source path configured in their
-configuration cells. Change `AUTH_PATH` to the local location of the LANL
-authentication file before rebuilding the raw-event cache.
+The notebooks expect the raw authentication file at:
 
-Large generated data files such as `auth_main.parquet` and the static feature
-Parquet tables are intentionally excluded from version control.
+```text
+auth.txt.gz
+```
+
+Alternatively, `AUTH_PATH` can be changed in the notebook configuration cells
+to point to a local copy of the data.
+
+Large generated files, including `auth_main.parquet`, static feature Parquet
+tables and row-level semi-synthetic outputs, are intentionally excluded from
+version control.
 
 ## Fixed split and reusable intermediate results
 
-The pipeline uses a fixed account-level fit/calibration/test split.
+The analysis uses a fixed account-level fit/calibration/test split. The saved
+split definition is provided in `account_split_static.json`.
 
-Small reproducibility artefacts may be committed with the repository,
-including the split metadata, quiet-hour definition, CORE5 representation
-metadata, frozen custom-mixture state and frozen generic scorer state.
+The repository also includes small frozen artefacts required by downstream
+analyses, including:
 
-Precomputed intermediate outputs from computationally expensive mixture
-fitting are included for convenience. The notebooks retain the code required
-to regenerate these outputs from the fitting partition.
+- the quiet-hour definition;
+- feature-build and CORE5 representation metadata;
+- the custom-mixture BIC scan and frozen K=6 state;
+- the frozen generic scorer bundle;
+- final calibration, test, disagreement, manual-review and responsiveness
+  summaries.
+
+Computationally expensive custom-mixture fitting outputs are retained so that
+the downstream notebooks can be reproduced without refitting the model.
 
 `02a_custom_mixture_development.ipynb` reuses the saved BIC scan and frozen
-K=6 state when they are available. If they are absent, the notebook contains
-the code required to refit them.
+K=6 state when they are present. If they are removed, the notebook contains
+the code required to regenerate them from the fitting partition.
 
 ## Custom-mixture implementation
 
 The K-component custom mixture is identified by
-`MIXTURE_MODEL_VERSION` in `nhs_mixture.py`. The frozen mixture state records
-the same identifier, and downstream notebooks check it before scoring.
+`MIXTURE_MODEL_VERSION` in `nhs_mixture.py`.
+
+The frozen mixture state records the same implementation version, and
+downstream notebooks check this before applying the saved model.
 
 ## Evaluation references
 
-Account-name rules are used only as weak reference groups and not as verified
-ground-truth account types. The final scorer comparison evaluates the broader
-automation-associated reference group (dollar-suffix accounts together with
-SYSTEM, LOCAL SERVICE and NETWORK SERVICE) against U-named user proxies.
+Account-name rules are used only as weak behavioural reference groups and are
+not treated as verified ground-truth account types.
+
+For final scorer evaluation, the broader automation-associated reference group
+combines dollar-suffix accounts with the named system accounts `SYSTEM`,
+`LOCAL SERVICE` and `NETWORK SERVICE`. These are compared with U-named user
+proxies.
 
 ## Reproducibility
 
-The final static pipeline freezes scorer-specific fitting quantities before
-calibration/test application. The selected K-means scorer is not refitted in
-the final test evaluation, disagreement analysis, manual behavioural review,
-or semi-synthetic responsiveness experiment.
+Scorer-specific quantities are estimated using the fitting partition and then
+held fixed when applied to the calibration and test partitions.
+
+The selected K-means scorer is not refitted during:
+
+- final held-out test evaluation;
+- scorer-disagreement analysis;
+- manual behavioural inspection; or
+- the semi-synthetic machine-proxy behaviour injection experiment.
+
+The repository includes the corresponding summary tables, figures and metadata
+generated by the final analysis pipeline.
+
+## Environment
+
+Install the required Python packages with:
+
+```bash
+pip install -r requirements.txt
+```
+
+The raw LANL data and large intermediate Parquet files must be supplied locally
+before rebuilding the full pipeline from notebook 00.
